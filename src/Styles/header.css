@@ -1,0 +1,25 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header__logo {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    font-size: 26px;
+}
+
+.Header__icon {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.Header__icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+

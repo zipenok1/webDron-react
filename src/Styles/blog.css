@@ -1,0 +1,9 @@
+.Blog__title {
+    margin-top: 53px;
+}
+
+.Blog__cont {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}

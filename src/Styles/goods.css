@@ -1,0 +1,10 @@
+.Goods__title{
+    margin-top: 53px;
+}
+.Goods__cards{
+    display: flex;
+    justify-content: center;
+    gap: 0 158px;
+    flex-wrap: wrap;
+    
+}

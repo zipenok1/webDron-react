@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+}
+.Header__main{
+    background-image: url('../../public/img/fon.png');
+    height: 850px;
+}
+

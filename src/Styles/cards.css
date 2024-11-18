@@ -1,0 +1,33 @@
+.Cards{
+    margin-top: 139px;
+}
+
+.Cards__box{
+    width: 400px;
+    height: 420px;
+    box-shadow:0px 0px 8px black;
+    text-align: center;
+}
+
+.Cards__img{
+    margin-top: 38px;
+    width: 322px;
+    height: 234px;
+    
+}
+
+.Cards__box-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 153px;
+    margin-top: 28px;
+}
+
+.point__img {
+    cursor: pointer;
+}
+
+h3 {
+    margin-top: 20px;
+}
