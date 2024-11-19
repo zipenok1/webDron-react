@@ -1,7 +1,7 @@
 .Slader {
     display: flex;
     justify-content: center;
-    gap: 162px;
+    gap: 0px;
     align-items: center;
     margin-top: 170px;
 }
@@ -9,8 +9,8 @@
 .Slader__window {
     background-color:rgba(243, 243, 243, 1);
     box-shadow: 0px 0px 8px black;
-    width: 1400px;
-    height: 315px;
+    width: 1080px;
+    height: 310px;
     display: flex;
     justify-content: center;
     gap: 127px;
@@ -23,27 +23,34 @@
     box-shadow: 0px 0px 8px black;
 }
 
+
 .Slader__window-box{
-    margin-top: 79px; 
-    margin-left: -500px; 
+    margin-top: 70px; 
+    margin-left: -400px; 
     position: absolute;
 }
 
 .Slader__window-box p {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .Slader__windwo-item{
     margin-top: 30px;
     margin-left: 28px;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .Slader__windwo-li{
     margin-top: 25px;
 }
 .Slader__window-img{
-    margin-left: 224px;
-    width: 990px;
+    margin-top: 60px;
+    margin-left: 382px;
+    width: 900px;
     height: 300px;
+}
+
+.Slader__window-img img {
+    width: 700px;
+    height: 220px;
 }
