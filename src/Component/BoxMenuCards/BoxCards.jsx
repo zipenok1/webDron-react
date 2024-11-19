@@ -6,9 +6,11 @@ function BoxCards({imeges,prase,title}) {
 
     return (
       <div className="BoxCards">
-            <img src='' alt="alt" />
-            <h3>ghbdtn</h3>
-            <p>131313</p>
+            <img className="BoxCards__img" src='img/kvadra2.png' alt="alt" />
+              <div className="BoxCards-text">
+                <h3>Гавнокоптер DJI Mavic 2 Pro</h3>
+                <p>18.000</p>
+              </div>
       </div>
     );
   }

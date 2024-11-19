@@ -11,5 +11,7 @@
 .Header__main{
     background-image: url('../../public/img/fon.png');
     height: 850px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 

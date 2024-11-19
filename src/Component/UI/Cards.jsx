@@ -4,11 +4,12 @@ import Buttom from "./Buttom";
 import Plus from '../../Images/plus.png'
 import Cek from'../../Images/ceking.png'
 
-function Cards({imeges,title, prase}) {
+function Cards({imeges,title, prase,onPlus}) {
 
   const [adder, setAdder] = useState(false)
 
   const onClickPlus = () => {
+    onPlus({imeges, title, prase})
     setAdder(!adder)
   }
 
@@ -16,7 +17,7 @@ function Cards({imeges,title, prase}) {
       <div className="Cards">
             <div className="Cards__box">
                 
-                  <div>
+                  <div className="Cards__box-cont">
                     <img className="Cards__img" src={imeges} alt="#"></img>
                     
                     <h3>{title}</h3>

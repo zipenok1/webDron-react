@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Styles/boxMenu.css'
 import Title from "./UI/Title";
 import BoxCards from "./BoxMenuCards/BoxCards";
-function BoxMenu({onCloseCart}) {
+function BoxMenu({onCloseCart, items=[]}) {
 
     
   
@@ -19,7 +19,9 @@ function BoxMenu({onCloseCart}) {
               className="BoxMenu__btm">Назад</button>
             </div>
               <div className="BoxMenu__aitem">
-                  <BoxCards/>
+                 {items.map((el)=>(
+                   <BoxCards/>
+                 ))}
               </div>
 
           </div>

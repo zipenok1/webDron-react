@@ -4,7 +4,7 @@ import '../Styles/slader.css'
 function Slader() {
     return (
       <div className="Slader">
-        <div className="Slader__lr"/>
+        
             <div className="Slader__window">
                 <div className="Slader__window-box">
                     <p>Экономьте до 10%</p>
@@ -17,7 +17,7 @@ function Slader() {
                         <img src='img/sladit.png' alt="#" />
                     </divc>
             </div>
-        <div className="Slader__lr"/>
+        
       </div>
     );
   }

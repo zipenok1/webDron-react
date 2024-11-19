@@ -6,17 +6,22 @@ import Title from "./UI/Title";
 
 
 function Goods() {
-
+  const [cartAitem, setCartAtitem] = useState([])
   const [items, setItems] = useState([])
   
   useEffect(()=>{
-    axios.get('https://673b5c53339a4ce4451beccc.mockapi.io/items')
-
-    .then((response)=>{
-      setItems(response.items.results);
-    })
+    fetch('https://673b5c53339a4ce4451beccc.mockapi.io/items')
+      .then((res)=>{
+        return res.json();
+      })
+      .then((json)=>{
+        setItems(json);
+      })
   })
 
+  const onAddPlus = (el)=>{
+    setCartAtitem([...cartAitem, el]);
+  }
 
     return (
       <div className="Goods">
@@ -28,8 +33,9 @@ function Goods() {
             <Cards 
             imeges={el.imeges} 
             title={el.title} 
-            prase={el.prase}>
-            </Cards>
+            prase={el.prase}
+            onPlus={(el) => onAddPlus(el)}
+            />
           ))}
             
               
