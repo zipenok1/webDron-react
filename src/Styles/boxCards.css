@@ -1,7 +1,7 @@
 .BoxCards{
     display: flex;
     gap: 40px;
-    margin-left: 40px;
+    margin: 20px 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
     padding: 10px;

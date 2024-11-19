@@ -10,7 +10,7 @@ function Header({onClickCart}) {
       <div className="Header">
         <div className="Header__logo">
             <p>ДронТек</p>
-            <img src={Dron} alt="1"/>
+            <img className="icon__dron" src={Dron} alt="1"/>
         </div>
         <div className="Header__icon">
             <img className="icon" src={Cart} alt="2" />

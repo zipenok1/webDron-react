@@ -7,9 +7,11 @@
     display: flex;
     align-items: center;
     gap: 31px;
-    font-size: 26px;
+    font-size: 24px;
 }
-
+.icon__dron{
+    width: 100px;
+}
 .Header__icon {
     display: flex;
     align-items: center;
@@ -17,8 +19,8 @@
 }
 
 .Header__icon img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
 }
 
