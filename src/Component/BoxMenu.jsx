@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Styles/boxMenu.css'
 import Title from "./UI/Title";
 import BoxCards from "./BoxMenuCards/BoxCards";
-function BoxMenu({onCloseCart, items=[]}) {
+function BoxMenu({onCloseCart, itm=[]}) {
 
     
   
@@ -10,8 +10,6 @@ function BoxMenu({onCloseCart, items=[]}) {
       <div className="BoxMenu">
           <div className='overley'>
           <div className='shadow'>
-
-
             <div className="BoxMenu__title">
               <Title text='Корзина' />
               <button
@@ -19,14 +17,16 @@ function BoxMenu({onCloseCart, items=[]}) {
               className="BoxMenu__btm">Назад</button>
             </div>
               <div className="BoxMenu__aitem">
-                 {items.map((el)=>(
-                   <BoxCards/>
+                 {itm.map((el)=>(
+                   <BoxCards
+                    key={el.id}
+                    imeges={el.imeges} 
+                    title={el.title} 
+                    prase={el.prase}/>
                  ))}
               </div>
-
           </div>
-          </div>
-    
+          </div> 
       </div>
     );
   }

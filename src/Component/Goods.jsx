@@ -5,10 +5,10 @@ import Cards from "./UI/Cards";
 import Title from "./UI/Title";
 
 
-function Goods() {
-  const [cartAitem, setCartAtitem] = useState([])
-  const [items, setItems] = useState([])
-  
+function Goods({onAddFun,onRem}) {
+
+  const [items, setItems] = useState([]) 
+
   useEffect(()=>{
     fetch('https://673b5c53339a4ce4451beccc.mockapi.io/items')
       .then((res)=>{
@@ -17,11 +17,7 @@ function Goods() {
       .then((json)=>{
         setItems(json);
       })
-  })
-
-  const onAddPlus = (el)=>{
-    setCartAtitem([...cartAitem, el]);
-  }
+  },[])
 
     return (
       <div className="Goods">
@@ -31,14 +27,14 @@ function Goods() {
         <div className="Goods__cards">
           {items.map((el)=> (
             <Cards 
+            key={el.id}
             imeges={el.imeges} 
             title={el.title} 
             prase={el.prase}
-            onPlus={(el) => onAddPlus(el)}
+            onPlus={(obj) => onAddFun(obj)}
+            onRe={onRem}
             />
-          ))}
-            
-              
+          ))}            
         </div>
       </div>
     );

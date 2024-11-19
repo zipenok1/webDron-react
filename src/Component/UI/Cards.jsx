@@ -4,11 +4,12 @@ import Buttom from "./Buttom";
 import Plus from '../../Images/plus.png'
 import Cek from'../../Images/ceking.png'
 
-function Cards({imeges,title, prase,onPlus}) {
+function Cards({imeges,title, prase,onPlus,onRe}) {
 
   const [adder, setAdder] = useState(false)
 
   const onClickPlus = () => {
+    onRe()
     onPlus({imeges, title, prase})
     setAdder(!adder)
   }

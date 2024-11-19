@@ -6,10 +6,10 @@ function BoxCards({imeges,prase,title}) {
 
     return (
       <div className="BoxCards">
-            <img className="BoxCards__img" src='img/kvadra2.png' alt="alt" />
+            <img className="BoxCards__img" src={imeges} alt="alt" />
               <div className="BoxCards-text">
-                <h3>Гавнокоптер DJI Mavic 2 Pro</h3>
-                <p>18.000</p>
+                <h3>{title}</h3>
+                <p>{prase}</p>
               </div>
       </div>
     );
