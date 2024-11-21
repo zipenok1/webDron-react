@@ -1,0 +1,30 @@
+.Header__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Header__box-logo{
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    align-items: center;
+}
+.Header__box-text h3{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.Header__box-text p{
+    font-size: 14px;
+    color: rgba(157, 157, 157, 1);
+}
+.Header__box-icon{
+    display: flex;
+    padding: 0 40px;
+    gap: 40px;
+    align-items: center;
+}
+
+.Header__lain{
+    height: 1px;
+    background-color: rgba(234, 234, 234, 1);
+}

@@ -1,0 +1,17 @@
+.Greetings{
+    background: url('../../../public/img/GreetingsFons.png')  no-repeat center;
+    height: 1000px;
+}
+.Greetings__box-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 220px 0 0;
+    margin-left: 90px;
+    color: #fff;
+}
+.Greetings__box-card{
+    display: flex;
+    justify-content: center;
+}
