@@ -1,0 +1,31 @@
+
+.Cards__box{
+    margin-top: 40px;
+    width: 293px;
+    height: 313px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 3px rgb(141, 139, 139);
+}
+.Cards__box-img{
+    margin-top: 25px;
+    width: 230px;
+    height: 150px;
+}
+
+.Cards__box h3{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.Cards__box p{
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(70, 66, 66);
+}
+.Cards__box-exl{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}

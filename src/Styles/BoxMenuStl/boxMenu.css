@@ -1,0 +1,34 @@
+.Overley{
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(61, 61, 61, 0.4);
+}
+.Shadow{
+    position: fixed;
+    top: 30px;
+    left: 605px;
+    width: 688px;
+    height: 900px;
+    border-radius: 14px;
+    background-color: white;
+
+}
+.BoxMenu__title{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.BoxMenu__title h3 {
+    font-size: 30px;
+}
+.BoxMenu__title button{
+    width: 100px;
+    border: 2px solid rgb(18, 110, 202);
+    background: none;
+    color: rgb(18, 110, 202) ;
+    cursor: pointer;
+}
