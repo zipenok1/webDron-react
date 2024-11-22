@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import '../Styles/MainStl/main.css'
 import Header from "./Ui/Header";
 import Cards from "./Ui/Cards";
-
-
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all";
 
 function Main ({onClickCart}) {
+
+    gsap.registerPlugin(ScrollTrigger)
+    useLayoutEffect(()=> {
+       gsap.from(".Main__box",{opacity: 0, duration: 2, 
+        scrollTrigger: {
+            trigger: ".Main__box"
+       }})
+    },[])
 
     const [items,setItems] = useState([])
 

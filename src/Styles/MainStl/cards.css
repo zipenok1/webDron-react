@@ -24,8 +24,11 @@
 }
 .Cards__box-exl{
     display: flex;
-    gap: 100px;
+    gap: 135px;
     justify-content: center;
     align-items: center;
     height: 50px;
+}
+.Cards__box-exl img{
+    cursor: pointer;
 }

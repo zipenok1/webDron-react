@@ -11,7 +11,9 @@ function BoxMenu ({onBackCard}) {
                         <h3>Корзина</h3>
                         <button onClick={onBackCard}>Назад</button>
                     </div>
-                    
+                    <div className="BoxMenu__item">
+
+                    </div>
                 </div>
             </div>
         </div>

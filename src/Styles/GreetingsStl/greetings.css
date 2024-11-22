@@ -1,6 +1,7 @@
 .Greetings{
     background: url('../../../public/img/GreetingsFons.png')  no-repeat center;
     height: 1000px;
+    overflow-x:hidden;
 }
 .Greetings__box-log{
     display: flex;

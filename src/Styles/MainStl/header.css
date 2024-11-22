@@ -23,7 +23,9 @@
     gap: 40px;
     align-items: center;
 }
-
+.Header__box-icon img{
+    cursor: pointer;
+}
 .Header__lain{
     height: 1px;
     background-color: rgba(234, 234, 234, 1);

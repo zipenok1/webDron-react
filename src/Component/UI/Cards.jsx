@@ -20,7 +20,8 @@ function Cards ({imeges,title,prase}) {
                         width={25} 
                         style={{marginTop:12}} 
                         onClick={onClickState}
-                        src={adder ? "img/icon/plus.png" : "img/icon/ceking.png"} alt="ck" />
+                        src={adder ? "img/icon/plus.png" : "img/icon/ceking.png"} 
+                        alt="ck" />
                     </div>
             </div>
         </div>

@@ -1,8 +1,23 @@
-import React from "react";
+import React, {useLayoutEffect} from "react";
 import '../Styles/GreetingsStl/greetings.css'
 import GreetingsCard from "./Ui/GreetingsCard";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all";
 
 function Greetings() {
+
+    gsap.registerPlugin(ScrollTrigger)
+    useLayoutEffect(()=> {
+       gsap.from(".Greetings__box-log",{opacity: 0, x: 500, duration: 2, 
+        scrollTrigger: {
+            trigger: ".Greetings__box-log"
+       }})
+       gsap.from(".Greetings__box-card",{opacity: 0, x: -500, duration: 2, 
+        scrollTrigger: {
+            trigger: ".Greetings__box-card"
+       }})
+    },[])
+
     return (
         <div className="Greetings">
             <div className="wrap">
@@ -15,7 +30,7 @@ function Greetings() {
                     </div> 
 
                     <div className="Greetings__box-card">
-                        <GreetingsCard 
+                        <GreetingsCard
                         icon='img/icon2.png'
                         color='rgba(111, 177, 70, 1)'/>
                         <GreetingsCard 
