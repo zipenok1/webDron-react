@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import '../Styles/MainStl/main.css'
 import Header from "./Ui/Header";
 import Cards from "./Ui/Cards";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all";
 
-function Main ({onClickCart}) {
+function Main ({onClickCart ,aitem,addBox,contBox}) {
 
     gsap.registerPlugin(ScrollTrigger)
     useLayoutEffect(()=> {
@@ -14,19 +14,17 @@ function Main ({onClickCart}) {
             trigger: ".Main__box"
        }})
     },[])
-
-    const [items,setItems] = useState([])
-
-    useEffect(()=>{
-        fetch('https://673b5c53339a4ce4451beccc.mockapi.io/items')
-          .then((res)=>{
-            return res.json();
-          })
-          .then((json)=>{
-            setItems(json);
-          })
-      },[])
-
+    
+    const onAddPlus = (obj)=>{
+        addBox(prev=>{
+            const checker = prev.some(aitem => JSON.stringify(aitem)===JSON.stringify(obj))
+            if (!checker){
+                return [...prev, obj]
+            }
+            return prev
+        });
+    }
+    console.log(contBox);
     return (
 
         <div className="Main wrap">
@@ -34,12 +32,13 @@ function Main ({onClickCart}) {
                 <Header onBoxCart={onClickCart}/>
                     <h2 className="Main__card-title">Все товары</h2>
                         <div className="Main__card-box">
-                            {items.map((el)=> (
+                            {aitem.map((el)=> (
                                 <Cards
                                 key={el.id}
                                 imeges={el.imeges} 
                                 title={el.title} 
                                 prase={el.prase}
+                                onPlus={onAddPlus}
                                 />
                             ))}  
                         </div>

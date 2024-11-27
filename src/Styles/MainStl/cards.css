@@ -5,7 +5,7 @@
     height: 313px;
     text-align: center;
     background-color: white;
-    box-shadow: 0px 0px 3px rgb(141, 139, 139);
+    box-shadow: 0px 0px 4px rgb(141, 139, 139, .6);
 }
 .Cards__box-img{
     margin-top: 25px;
