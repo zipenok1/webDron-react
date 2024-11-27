@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
         <Greetings/>
-        {cartOpen ? <BoxMenu aitems={boxItems} onBackCard={()=> {setCartOpen(false); document.body.style.overflow='auto'}}/>: null}
+        {cartOpen ? <BoxMenu delBox={setBoxItems} aitems={boxItems} onBackCard={()=> {setCartOpen(false); document.body.style.overflow='auto'}}/>: null}
         <Main contBox={boxItems} addBox={setBoxItems} aitem={items} onClickCart={()=> {setCartOpen(true); document.body.style.overflow='hidden'}}/>
     </div>
   );

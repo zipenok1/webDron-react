@@ -10,7 +10,7 @@ function BoxMenuCard ({noDel,imeges,title,prase}) {
                     <h3>{title}</h3>
                     <p>{prase}</p>
                     <img
-                    onClick={noDel}
+                    onClick={()=>noDel(title)}
                     src="img/icon/deleate.png" 
                     alt="del"/>
                 </div>               
