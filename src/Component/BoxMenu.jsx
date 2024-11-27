@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import '../Styles/BoxMenuStl/boxMenu.css'
+import BoxMenuCard from "./Ui/BoxMenuCard";
 
-function BoxMenu ({onBackCard}) {
+function BoxMenu ({onBackCard , aitems=[]}) {
+
+    const [deleat,setDeleat] = useState(true)
+    const onClickDel = () =>{
+        setDeleat(false)
+    }
+   
+
     return (
 
         <div className="BoxMenu">
@@ -12,7 +20,17 @@ function BoxMenu ({onBackCard}) {
                         <button onClick={onBackCard}>Назад</button>
                     </div>
                     <div className="BoxMenu__item">
-
+                        {deleat ? 
+                        aitems.map((obj)=>(
+                        <BoxMenuCard
+                        key={obj.id}
+                        imeges={obj.imeges} 
+                        title={obj.title} 
+                        prase={obj.prase}
+                        noDel={onClickDel}/>
+                        )) 
+                        : setDeleat
+                        }
                     </div>
                 </div>
             </div>

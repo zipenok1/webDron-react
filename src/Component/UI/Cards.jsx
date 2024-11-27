@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import '../../Styles/MainStl/cards.css'
 
-function Cards ({imeges,title,prase}) {
+function Cards ({imeges,title,prase,onPlus}) {
 
     const [adder, setAdder] = useState(false)
     const onClickState = () =>{
         setAdder(!adder)
+        onPlus({imeges,title,prase})
     }
 
     return (

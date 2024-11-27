@@ -1,0 +1,29 @@
+.BoxMenuCard{
+    display: flex;
+    justify-content: center;
+}
+.BoxMenuCard__box{
+    padding:0 20px;
+    margin-top: 20px;
+    width: 550px;
+    height: 160px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(141, 139, 139, .6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.BoxMenuCard__box img{
+    width: 205px;
+    height: 135px;
+}
+.BoxMenuCard__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.BoxMenuCard__item img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

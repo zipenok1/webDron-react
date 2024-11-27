@@ -15,6 +15,7 @@
     height: 900px;
     border-radius: 14px;
     background-color: white;
+    overflow: auto;
 
 }
 .BoxMenu__title{
