@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../Styles/BoxMenuStl/boxMenu.css'
 import BoxMenuCard from "./Ui/BoxMenuCard";
 
-function BoxMenu ({onBackCard , aitems=[]}) {
+function BoxMenu ({onBackCard , aitems=[],delBox}) {
 
     const [deleat,setDeleat] = useState(true)
-    const onClickDel = () =>{
-        setDeleat(false)
+    const onClickDel = (title) =>{
+ 
+        const newItems = items.filter(item => item.title !== title);
+        setItems(newItems)    
+        delBox(newItems)
     }
-   
+
+    const [items,setItems] = useState(aitems)
+    useEffect(()=>{
+        if(items.length != 0){
+            setDeleat(true);
+        }else{setDeleat(false)}
+       
+    },[items])
 
     return (
 
@@ -21,7 +31,7 @@ function BoxMenu ({onBackCard , aitems=[]}) {
                     </div>
                     <div className="BoxMenu__item">
                         {deleat ? 
-                        aitems.map((obj)=>(
+                        items.map((obj)=>(
                         <BoxMenuCard
                         key={obj.id}
                         imeges={obj.imeges} 
@@ -29,7 +39,7 @@ function BoxMenu ({onBackCard , aitems=[]}) {
                         prase={obj.prase}
                         noDel={onClickDel}/>
                         )) 
-                        : setDeleat
+                        : <div style={{marginTop:60, fontSize:40}}>Корзина пуста</div>
                         }
                     </div>
                 </div>
