@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import '../Styles/BoxMenuStl/boxMenu.css'
 import BoxMenuCard from "./Ui/BoxMenuCard";
-
+import { appContext } from "../Context";
 function BoxMenu ({onBackCard , aitems=[],delBox}) {
 
     const [deleat,setDeleat] = useState(true)
     const onClickDel = (title) =>{
- 
         const newItems = items.filter(item => item.title !== title);
         setItems(newItems)    
         delBox(newItems)
@@ -16,12 +15,11 @@ function BoxMenu ({onBackCard , aitems=[],delBox}) {
     useEffect(()=>{
         if(items.length != 0){
             setDeleat(true);
-        }else{setDeleat(false)}
-       
+        }else{setDeleat(false)}   
     },[items])
-
+    
     return (
-
+        
         <div className="BoxMenu">
             <div className="Overley">
                 <div className="Shadow">
@@ -37,9 +35,14 @@ function BoxMenu ({onBackCard , aitems=[],delBox}) {
                         imeges={obj.imeges} 
                         title={obj.title} 
                         prase={obj.prase}
-                        noDel={onClickDel}/>
+                        noDel={onClickDel}
+                        />
                         )) 
-                        : <div style={{marginTop:60, fontSize:40}}>Корзина пуста</div>
+                        :
+                        <div className="Empty__сart">
+                            <img src="img/icon/iconbox.png" alt="empty"/>
+                            <h2>Корзина пуста</h2>
+                        </div>
                         }
                     </div>
                 </div>

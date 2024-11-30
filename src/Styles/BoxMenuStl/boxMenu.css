@@ -33,3 +33,18 @@
     color: rgb(18, 110, 202) ;
     cursor: pointer;
 }
+.Empty__сart{
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Empty__сart img {
+    width: 200px;
+}
+.Empty__сart h2{
+    color: rgb(117, 117, 117);
+    margin-top: 30px;
+    font-size: 34px;
+}

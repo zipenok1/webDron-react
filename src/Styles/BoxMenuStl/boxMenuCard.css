@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 265px;
 }
 .BoxMenuCard__item img{
     width: 25px;
