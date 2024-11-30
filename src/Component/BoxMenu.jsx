@@ -15,9 +15,13 @@ function BoxMenu ({onBackCard , aitems=[],delBox}) {
     useEffect(()=>{
         if(items.length != 0){
             setDeleat(true);
-        }else{setDeleat(false)}   
+        }else{setDeleat(false)
+            
+        }   
     },[items])
     
+    
+
     return (
         
         <div className="BoxMenu">
