@@ -21,10 +21,14 @@ function Main ({onClickCart ,aitem,addBox,contBox}) {
             if (!checker){
                 return [...prev, obj]
             }
+            if (checker) {
+                return prev.filter(aitem => JSON.stringify(aitem) !== JSON.stringify(obj));
+            }
             return prev
         });
     }
-    console.log(contBox);
+    
+    // console.log(contBox);
     return (
 
         <div className="Main wrap">
@@ -39,6 +43,7 @@ function Main ({onClickCart ,aitem,addBox,contBox}) {
                                 title={el.title} 
                                 prase={el.prase}
                                 onPlus={onAddPlus}
+                                conBox={contBox}
                                 />
                             ))}  
                         </div>
