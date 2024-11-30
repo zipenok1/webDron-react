@@ -9,7 +9,9 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false)
   const [items,setItems] = useState([])
   const [boxItems,setBoxItems] = useState([])  
-  
+  const isItemAdd = (title)=>{
+    return items.filter(item => item.title !== title);
+  }
 
     useEffect(()=>{
         fetch('https://673b5c53339a4ce4451beccc.mockapi.io/items')
@@ -22,11 +24,11 @@ function App() {
       },[])
 
   return (
-    <appContext.Provider value={{}}>
+    <appContext.Provider value={{items,boxItems}}>
     <div className="App">
         <Greetings/>
         {cartOpen ? <BoxMenu delBox={setBoxItems} aitems={boxItems} onBackCard={()=> {setCartOpen(false); document.body.style.overflow='auto'}}/>: null}
-        <Main contBox={boxItems} addBox={setBoxItems} aitem={items} onClickCart={()=> {setCartOpen(true); document.body.style.overflow='hidden'}}/>
+        <Main contBox={boxItems} addBox={setBoxItems} onClickCart={()=> {setCartOpen(true); document.body.style.overflow='hidden'}}/>
     </div>
     </appContext.Provider>
   );

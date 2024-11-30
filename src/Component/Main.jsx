@@ -1,11 +1,12 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useContext } from "react";
 import '../Styles/MainStl/main.css'
 import Header from "./Ui/Header";
 import Cards from "./Ui/Cards";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all";
+import { appContext } from "../Context";
 
-function Main ({onClickCart ,aitem,addBox,contBox}) {
+function Main ({onClickCart ,addBox,contBox}) {
 
     gsap.registerPlugin(ScrollTrigger)
     useLayoutEffect(()=> {
@@ -28,6 +29,7 @@ function Main ({onClickCart ,aitem,addBox,contBox}) {
         });
     }
     
+    const {items} = useContext(appContext)
     // console.log(contBox);
     return (
 
@@ -36,7 +38,7 @@ function Main ({onClickCart ,aitem,addBox,contBox}) {
                 <Header onBoxCart={onClickCart}/>
                     <h2 className="Main__card-title">Все товары</h2>
                         <div className="Main__card-box">
-                            {aitem.map((el)=> (
+                            {items.map((el)=> (
                                 <Cards
                                 key={el.id}
                                 imeges={el.imeges} 
