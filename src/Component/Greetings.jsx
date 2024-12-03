@@ -35,7 +35,7 @@ function Greetings() {
                         icon='img/icon2.png'
                         color='rgba(111, 177, 70, 1)'/>
                         <GreetingsCard 
-                        text='надожность'
+                        text='надежность'
                         icon='img/icon1.png'
                         color='rgba(108, 220, 38, 1)'/>
                         <GreetingsCard
