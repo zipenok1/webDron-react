@@ -31,4 +31,8 @@
 }
 .Cards__box-exl img{
     cursor: pointer;
+    transition: transform .3s;
+}
+.Cards__box-exl img:hover {
+    transform: scale(1.2);
 }

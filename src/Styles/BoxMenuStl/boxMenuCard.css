@@ -27,4 +27,8 @@
     width: 25px;
     height: 25px;
     cursor: pointer;
+    transition: transform .3s;
+}
+.BoxMenuCard__item img:hover {
+    transform: scale(1.1);
 }

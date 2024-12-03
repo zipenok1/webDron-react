@@ -20,10 +20,10 @@ function Cards ({key,imeges,title,prase,onPlus,conBox}) {
                     <div className="Cards__box-exl">
                         <p>{prase}</p>
                         <img 
-                        width={25} 
+                        width={45} 
                         style={{marginTop:12}} 
                         onClick={onClickState} 
-                        src="img/icon/cek.png"
+                        src="img/icon/addORremove.svg"
                         alt="ck"/>
                     </div>
             </div>
